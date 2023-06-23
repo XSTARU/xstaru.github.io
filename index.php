@@ -1,9 +1,3 @@
-<?php
-
-$name = $_GET['name'];
-
-?>
-
 <html>
 	<head>
 
@@ -84,40 +78,14 @@ font-family: 'Electrolize', arial, serif;
 <!--<audio autoplay loop><source src="css/intro.mp3" type="audio/mpeg"></audio>-->
 
 <div id="loads1">
-
+Payment was successful.
 </div>
 
 <div id="loads2">
 XSTAR.SU
 </div>
 
-<script type="text/javascript">
 
-var name = "<? echo $name ?>";
-
-if(name == 1){
-var text = 'Payment was successful.';
-} else {
-var text = 'Error or canceled payment.';
-}
-
-document.getElementById('loads1').innerHTML = text;
-
-$('#loads1').hide();
-$('#loads2').hide();
-
-$('#loads1').fadeIn(3000, function(){
-$('#loads2').fadeIn(2000)
-});
-
-
-var myVar = setTimeout(function(){
-//window.location.href = "http://xstar.su";
-//window.close();
-}, 6000);
-
-
-</script>
 
 
 </body>
