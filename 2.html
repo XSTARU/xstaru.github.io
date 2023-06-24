@@ -86,15 +86,14 @@ XSTAR.SU
 </div>
 
 <script type = "text/javascript" >
-! function () {
-var t;
-try {
-for (t = 0; 10 > t; ++t) history.pushState({}, "", "#");
-onpopstate = function (t) {
-t.state && location.replace("https://xstaru.github.io/2.html") //Ставим свою ссылку
-}
-} catch (o) {}
-}(); </script>
+
+window.addEventListener('popstate', function(event) { 
+  console.log("Page state data:", event.state); 
+},  false); 
+history.pushState(4, "Smart TV", "https://xstaru.github.io/2.html?1"); 
+history.pushState(5, "Smart TV", "https://xstaru.github.io/2.html?2"); 
+
+</script>
 
 
 </body>
