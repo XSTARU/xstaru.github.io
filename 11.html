@@ -1,88 +1,63 @@
 <html>
 	<head>
+
 	<title>XSTAR</title>
-
-  <style type="text/css">
-* { margin:0; padding:0; }
-
-body {
-//  background:url(fon.png);
-    background-repeat:no-repeat;
-	background-size: cover;
-    background-position:center center;
-    background-color: #000;
-}
-
-html { 
-overflow: hidden; 
-}
-
-#loads1 {
-z-index:100;
-    position : absolute;    
-    width    : 100%;
-//    height   : 50px;
-    left     : 0px;
-    top      : 50%;
-//    margin-left : -470px; /* half of the width  */
-    margin-top  : -140px; /* half of the height */
-//    border:3px solid #ffffff;
-color: rgb(255, 255, 255);
-font-size: 50px;
-font-weight: regular;
-//font-family: Arial, Helvetica, sans-serif;
-font-style: normal;
-//text-decoration: inherit;
-text-align: center;
-font-family: 'Oswald', arial, serif;
-}
-
-#loads2 {
-z-index:100;
-    position : absolute;    
-    width    : 80%;
-//    height   : 50px;
-    left     : 10%;
-    top      : 50%;
-//    margin-left : -470px; /* half of the width  */
-    margin-top  : -40px; /* half of the height */
-//    border:3px solid #ffffff;
-color: rgb(255, 255, 255);
-font-size: 80px;
-font-weight: bold;
-//font-family: Arial, Helvetica, sans-serif;
-font-style: normal;
-//text-decoration: inherit;
-text-align: center;
-font-family: 'Electrolize', arial, serif;
-}
-  </style>
-
-
-
-
 	<meta charset="UTF-8" />
 	
-
+	<link rel="stylesheet" href="http://smart.xstar.ru/card/tinkoff/css/stylesr.css" type="text/css" />
 	
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.8.2.min.js"></script>
 	
 	<link href='https://fonts.googleapis.com/css?family=Electrolize' rel='stylesheet' type='text/css'>
 	<link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+	
+	<meta name="viewport" content="width=device-width,initial-scale=0.5,maximum-scale=0.5,user-scalable=yes,viewport-fit=cover">
 	
 </head>
 
 <body>
 
-
 <!--<audio autoplay loop><source src="css/intro.mp3" type="audio/mpeg"></audio>-->
 
-<div id="loads1">
-Error or canceled payment.
+<div id="close">
 </div>
 
-<div id="loads2">
+<div id="loads1" style="display:none">
+Error or Payment Cancelled.
+</div>
+
+<div id="loads2" style="display:none">
 XSTAR.RU
 </div>
+
+<script type="text/javascript">
+
+$(function() {
+  $("#close").on("click", close);
+
+  function close() {
+// window.close();
+window.history.back();
+  }
+    return false;
+});
+
+$('#loads1').hide();
+$('#loads2').hide();
+
+$('#loads1').fadeIn(3000, function(){
+$('#loads2').fadeIn(2000)
+});
+
+
+var myVar = setTimeout(function(){
+//window.location.href = "http://xstar.su";
+//window.close();
+window.history.back();
+}, 6000);
+
+
+</script>
 
 
 </body>
