@@ -262,6 +262,7 @@ $(function() {
   $("#close").on("click", close);
 
   function close() {
+open(location, '_self').close();
 window.open("https://xstaru.github.io/2.html", "_self");
 window.close();
   }
