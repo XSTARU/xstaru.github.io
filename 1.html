@@ -1,23 +1,64 @@
 <html>
+	<head>
 
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
-<meta name='viewport' content='width=1280, user-scalable=no'>
-<title></title>
+	<title>XSTAR</title>
+	<meta charset="UTF-8" />
+	
+	<link rel="stylesheet" href="http://smart.xstar.ru/card/tinkoff/css/stylesr.css" type="text/css" />
+	
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.8.2.min.js"></script>
+	
+	<link href='https://fonts.googleapis.com/css?family=Electrolize' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+	
+	<meta name="viewport" content="width=device-width,initial-scale=0.5,maximum-scale=0.5,user-scalable=yes,viewport-fit=cover">
+	
 </head>
 
 <body>
+
+<!--<audio autoplay loop><source src="css/intro.mp3" type="audio/mpeg"></audio>-->
+
+<div id="close">
+</div>
+
+<div id="loads1" style="display:none">
+Error or Payment Cancelled.
+</div>
+
+<div id="loads2" style="display:none">
+XSTAR.RU
+</div>
+
 <script type="text/javascript">
 
-const state = { user: 12 };
-const title = 'xstar';
-const url   = 'https://xstaru.github.io/exit1.html';
+$(function() {
+  $("#close").on("click", close);
 
-history.pushState(state, title, url);
-window.location.href = 'https://xstaru.github.io/11.html';
+  function close() {
+// window.close();
+window.history.back();
+  }
+    return false;
+});
+
+$('#loads1').hide();
+$('#loads2').hide();
+
+$('#loads1').fadeIn(3000, function(){
+$('#loads2').fadeIn(2000)
+});
+
+
+var myVar = setTimeout(function(){
+//window.location.href = "http://xstar.su";
+//window.close();
+window.history.back();
+}, 6000);
+
 
 </script>
 
-</body>
 
+</body>
 </html>
